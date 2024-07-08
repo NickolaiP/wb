@@ -1,0 +1,46 @@
+{{define "orders"}}
+<!doctype html>
+<html lang="ru" class="h-100">
+<head>
+    <title>Title</title>
+</head>
+<body class="d-flex flex-column h-100">
+<table class="table">
+    <table width="100%" cellspacing="0" border="1">
+        <tr>
+            <th>OrderUID</th>
+            <th>TrackNumber</th>
+            <th>Entry</th>
+            <th>Delivery</th>
+            <th>Payment</th>
+            <th>Items</th>
+            <th>Locale</th>
+            <th>InternalSignature</th>
+            <th>CustomerID</th>
+            <th>DeliveryService</th>
+            <th>Shardkey</th>
+            <th>SmID</th>
+            <th>DateCreated</th>
+            <th>OofShard</th>
+        </tr>
+        <tr>
+            <td>{{.OrderUID}}</td>
+            <td>{{.TrackNumber}}</td>
+            <td>{{.Entry}}</td>
+            <td>{{.Delivery}}</td>
+            <td>{{.Payment}}</td>
+            <td>{{.Items}}</td>
+            <td>{{.Locale}}</td>
+            <td>{{.InternalSignature}}</td>
+            <td>{{.CustomerID}}</td>
+            <td>{{.DeliveryService}}</td>
+            <td>{{.Shardkey}}</td>
+            <td>{{.SmID}}</td>
+            <td>{{.DateCreated}}</td>
+            <td>{{.OofShard}}</td>
+        </tr>
+        {{end}}
+    </table>
+</table>
+</body>
+</html>

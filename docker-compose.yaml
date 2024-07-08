@@ -1,0 +1,21 @@
+services:
+
+  nats:
+    container_name: nats
+    image: nats:latest
+    restart: always
+    command:
+      - "-js"
+    ports: [4222:4222]
+
+  db:
+    container_name: postgres
+    image: postgres:latest
+    restart: always
+    environment:
+      POSTGRES_DB: "test"
+      POSTGRES_USER: "user"
+      POSTGRES_PASSWORD: "1234"
+    ports: [5432:5432]
+    volumes:
+      - ./postgres/init.sql:/docker-entrypoint-initdb.d/1.sql
